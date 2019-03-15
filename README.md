@@ -1,7 +1,6 @@
 # Selenium Webdriver Factory
 Start automation tests by initiating different browsers in different modes. 
-You can run your tests locally, remotely, or in a grid using multiple browsers/platforms simultaneously
-This library provides an utility to manage WebDriver instances. It helps to create, reuse and dismiss WebDriver instances.
+You can run your tests locally, remotely, or in a grid using multiple browsers/platforms simultaneously. This library provides an utility to manage WebDriver instances. It helps to create, reuse and dismiss WebDriver instances.
 
 ## Factory Pattern
 Factory Pattern is one of the creation Patterns. It is mostly used when we need to create an object from one of several possible classes that share a common super class / implements an interface. It creates objects without exposing the instantiation logic to the user. We, as the user, refer to the newly created object through a common interface.
