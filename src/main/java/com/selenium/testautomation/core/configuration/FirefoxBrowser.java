@@ -1,8 +1,12 @@
 package com.selenium.testautomation.core.configuration;
 
+import java.io.File;
 import java.net.MalformedURLException;
+import java.net.URL;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.firefox.GeckoDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class FirefoxBrowser extends DriverManager {

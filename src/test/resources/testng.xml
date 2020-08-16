@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Smoke test" verbose= "5">
+	<listeners>
+		<listener class-name="com.selenium.testautomation.core.reporter.ExtentReport"></listener>
+		<listener class-name="com.selenium.testautomation.core.listeners.ExecutionListener"></listener>
+	</listeners>
+	<test name="Sample Test">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="env" value="remote"></parameter>
+		<parameter name="targetApp" value="AppUrl"></parameter>
+		<classes>
+		<class name="com.selenium.testautomation.TestConfigurationMethods"></class>
+		</classes>
+	</test>
+</suite>

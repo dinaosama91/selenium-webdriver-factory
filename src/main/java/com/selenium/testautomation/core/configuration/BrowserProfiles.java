@@ -1,10 +1,19 @@
 package com.selenium.testautomation.core.configuration;
 
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.util.HashMap;
+
 public class BrowserProfiles {
 
 	  private static String DOWNLOAD_DRECTORY = ConfigurationFiles.getpropertyValue("downloadDirPath");
 	  private static String SCREENCASTIFY_PATH = ConfigurationFiles.getpropertyValue("screenCastifyPath");
 	  private static DesiredCapabilities capabilities;
+
 	  protected static DesiredCapabilities chromeProfile() {
 	    capabilities = DesiredCapabilities.chrome();
 	    ChromeOptions options = new ChromeOptions();
@@ -36,7 +45,7 @@ public class BrowserProfiles {
 	    firefoxProfile.setPreference("browser. download. manager. focusWhenStarting", false);
 	    firefoxProfile.setPreference("browser. download. manager. showAlertOnComplete", false);
 	    firefoxProfile.setPreference("browser. helperApps. alwaysAsk. force", false);
-	    return options.setProfile(firefoxProfile).addTo(capabilities);
+	    return capabilities;
 
 	  }
 

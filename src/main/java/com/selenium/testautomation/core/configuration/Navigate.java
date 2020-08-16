@@ -13,7 +13,7 @@ public class Navigate {
 	  public void goToApp(String app) {
 	    request = ConfigurationFiles.getpropertyValue("url");
 	    if (request == null) {
-	      ApplicationLogger.logError("Unsupported Application", this.getClass());
+	      logging.ApplicationLogger.logError("Unsupported Application", this.getClass());
 	    } else
 	      DriverManager.getDriverInstance().get(request);
 	  }
@@ -28,7 +28,7 @@ public class Navigate {
 	      CloseableHttpResponse urlresp = HttpClientBuilder.create().build().execute(httprequest);
 	      return urlresp.getStatusLine().getStatusCode();
 	    } catch (IOException e) {
-	      ApplicationLogger.logError("Couldn't get response from application", this.getClass());
+	      logging.ApplicationLogger.logError("Couldn't get response from application", this.getClass());
 	      return 0;
 	    }
 	  }
